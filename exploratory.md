@@ -43,16 +43,16 @@ Looks like its mostly English (~45%) with a good amount of Chinese (~15%) and Ru
 Positive to negative reviews
 About 85% are positive reviews, 15% negative reviews.
 
-Purchases to free copies
-
 Amount of games
-
-Average playtime for a review
-
-
+Around 3000 games
 
 ### Quality Issues
 Looks like review time is given as time since epoch. Will have to convert to datetime if I end up needing this field.
 
 The same language might span different regions. Say a review written in English but by a reviewer in Russia.
+
+Dataset is extremely large. Compressed to parquet and only included the columns that I'll need for my analysis (~43GB --> 80MB) in data_cleaning.py
+
+Otherwise, for the columns that I need for my analysis (game, language, voted_up), this data is perfectly clean. 
+
 
