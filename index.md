@@ -65,13 +65,6 @@ Sentiment is the percentage of reviews which are positive in a region.
 
 ### Some Outliers
 
-<iframe
-  src="https://public.tableau.com/views/SteamReviewRegionalAnalysis/PopularityvsSentimentScatter?:embed=y&:display_count=yes"
-  width="100%"
-  height="800"
-  frameborder="0">
-</iframe>
-
 <div class='tableauPlaceholder' id='viz1771783617838' style='position: relative'>
 <noscript>
 <a href='#'>
