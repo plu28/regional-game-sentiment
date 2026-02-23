@@ -1,7 +1,7 @@
 # Make a 5MB sample of the full dataset for exploratory analysis
 import duckdb
 file = "archive/all_reviews/all_reviews.csv"
-output = "review_sample.csv"
+output = "../data/review_sample.csv"
 number_of_rows = 10000 
 
 print(f"Making a sample with {number_of_rows} rows.")

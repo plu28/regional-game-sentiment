@@ -1,0 +1,35 @@
+language,region,country
+schinese,China,China
+tchinese,China,Taiwan
+koreana,Korea,South Korea
+japanese,Japan,Japan
+vietnamese,SEA,Vietnam
+thai,SEA,Thailand
+indonesian,SEA,Indonesia
+russian,CIS,Russia
+ukrainian,CIS,Ukraine
+polish,Eastern Europe,Poland
+czech,Eastern Europe,Czechia
+hungarian,Eastern Europe,Hungary
+romanian,Eastern Europe,Romania
+bulgarian,Eastern Europe,Bulgaria
+greek,Eastern Europe,Greece
+turkish,Turkey,Turkey
+swedish,Nordic,Sweden
+danish,Nordic,Denmark
+norwegian,Nordic,Norway
+finnish,Nordic,Finland
+german,Western Europe,Germany
+french,Western Europe,France
+dutch,Western Europe,Netherlands
+italian,Western Europe,Italy
+spanish,Western Europe,Spain
+portuguese,Western Europe,Portugal
+english,English-speaking,United States
+english,English-speaking,Canada
+english,English-speaking,United Kingdom
+english,English-speaking,Ireland
+english,English-speaking,Australia
+english,English-speaking,New Zealand
+brazilian,Brazil,Brazil
+latam,LATAM,Mexico

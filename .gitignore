@@ -2,3 +2,4 @@
 *.twbr
 archive/
 *.parquet
+scripts/scratch.py
