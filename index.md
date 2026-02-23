@@ -5,14 +5,16 @@ title: Steam Games Regional Sentiment
 # Analysis of Game Preference by Region using Steam Reviews
 
 ## Introduction and Hypothesis
-I believe that using language data from steam reviews, we can answer some interesting questions regarding game sentiment in regions. 
+The Steam reviews data set is ~43gb of steam reviews. Each of these reviews tells you what language the review was written in. Using this, we can answer some interesting questions regarding game sentiment in different regions.
 
 1. What games are beloved by a country?
-    - Games so popular that they've had a cultural impact on a country.
-    - For example, Counter Strike has had a cultural impact in Eastern European countries, and I know Rocket League is also very strong in the french community.
+    - Hypothesis:
+        - Games so popular that they've had a cultural impact on a country.
+        - For example, Counter Strike has had a cultural impact in Eastern European countries, and I know Rocket League is also very strong in the french community.
 
 2. Are there games which are liked in one region but hated in another?
-    - I think there will be good games that might've done something to discriminate a particular region. 
+    - Hypothesis:
+        - I think there will be good games that might've done something to discriminate a particular region. 
 
 # How the Analysis Was Done
 
@@ -119,17 +121,17 @@ The majority (41.92%) of reviews come from English speaking countries. This is p
 ## Popularity and Sentiment
 The two main values on which I am running my analysis are popularity and sentiment.
 
-Popularity: How popular is this game in this region?
-Sentiment: How well received is this game in this region?
+- Popularity: How popular is this game in this region?
+- Sentiment: How well received is this game in this region?
 
 #### Popularity
-Popularity is taken by taking the proportion of reviews a game has for all of a regions reviews, over the proportion of reviews that game makes up globally.
+Popularity is taken by taking the proportion of reviews a game has for all of a regions reviews, over the proportion of reviews that the game makes up globally.
 
 This tells us how much a games popularity deviates from the norm for a region. 
 
 (region_game_reviews / region_total_reviews) / (global_game_reviews / global_total_reviews)
 
-A postive value means the game is more popular in this region, negative means the game is less popular in this region, and a 0 value means its as popular as it should be.
+A positive value means the game is more popular in this region, negative means the game is less popular in this region, and a 0 value means its as popular as it should be.
 
 <div class="tableauPlaceholder" id="viz1771885401652" style="position: relative">
     <noscript>
@@ -175,20 +177,20 @@ Visualizing popularity on a heatmap. The more red the tile, the less popular the
 
 Rows are countries, columns are games.
 
-The more varied a column is in its color, the more varied its popularity is region wide.
+The more varied a column is in its color, the more varied its popularity is across regions.
 
 The first thing to note is how varied the popularity is across regions. If games were equally popular in most regions, then the heatmap would be mostly white. 
 
 Counter Strike is a good example of this where the game is extremely popular in Eastern Europe (Romania especially) compared to other countries.
 
 #### Relative Sentiment
-Sentiment is calculated similarly to popularity, but using the positive review percent metric instead.
+Sentiment is calculated similar to popularity, but using the positive review percent metric instead.
 
 This tells us if the amount of positive reviews for a game deviate from the norm for a region.
 
-(region_game_positive_reviews / region_game_total_reviews) / (global_game_positive_reviews / global_game_reviews)
+(region %positive) / (global %positive)
 
-A positive value means the game has more positive reviews in this region than normal, negative means the game has more positive reviews than normal, and a 0 means its positive reviews are normal. 
+A positive value means the game has more positive reviews in this region than normal, negative means the game has more positive reviews than normal, and a 0 means its positive reviews match the global average. 
 
 <div class="tableauPlaceholder" id="viz1771885508101" style="position: relative;">
     <noscript>
@@ -234,7 +236,7 @@ The more red the tile, the more that country deviates towards negative from the 
 
 Rows are countries, columns are games.
 
-The first thing to note is the lack of variance in sentiment across regions. This implies that a games sentiment does not vary much across region.
+The first thing to note is the lack of variance in sentiment across regions. This implies that a games sentiment does not vary much across regions.
 
 # Results
 
@@ -324,7 +326,7 @@ This aligns with expectations considering how many of the worlds top players ori
 
 We see the opposite popularity for NARAKA: Bladepoint where the game isn't popular in any countries except for Asian ones.
 
-This is a battle royale game developed by a Chiense studio which takes centers its aesthetic around Chinese mythology and martial arts. Developers also invest heavily into an esports ecosystem which exists solely in Asian countries. 
+This is a battle royale game developed by a Chinese studio which centers its aesthetic around Chinese mythology and martial arts. The developers also invest heavily into an esports ecosystem which exists **only** in Asian countries. 
 
 So the focus on Asian mythology and esports investment solely in the Asian region, has made the game popular in Asian countries but not in others.
 
@@ -376,9 +378,7 @@ There is an interesting outlier though with Overwatch 2. The game got delisted f
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
-Also, if you look at Asian countries (Japan, Taiwan, China, South Korea), they seem to generally skew negative for their reviews for nearly all games. I believe these players have higher standards for games compared to other regions. 
-
-
+If you look at Asian countries relative game sentiment (Japan, Taiwan, China, South Korea), they seem to generally skew negative for their reviews for nearly all games. This seems to indicate that these players have higher standards for games compared to other regions. 
 
 
 ## Returning to the Hypothesis and Conclusion
@@ -405,12 +405,12 @@ Also, if you look at Asian countries (Japan, Taiwan, China, South Korea), they s
 
     Games especially more hated than in other regions:
     - Overwatch 2 in China (Global 11% positive, China 3% positive) 
-        - China lost support
+        - Overwatch 2 lost support in China and got review bombed 
     - Apex Legends in Taiwan (Global 79% positive, Taiwan 48% positive)
     - Apex Legends in Taiwan (Global 79% positive, Taiwan 48% positive)
     - EA Sports FIFA 23 in Japan (Global 55% positive, Japan 26% positive)
     - Rocket League in China (Global 89% Positive, China, 57% Positive)
-        - China lost support
+        - Rocket League lost support in China and got review bombed 
 
 
 ## Extra: Popularity vs Sentiment Scatter
@@ -438,5 +438,4 @@ var scriptElement = document.createElement('script');
 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-
 
