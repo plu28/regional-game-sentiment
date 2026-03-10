@@ -13,10 +13,10 @@ Feedback #2: Breadth of English speaking countries being too wide.
 Resolution: I can't really do anything about this one. The dataset doesn't tie a region to a review so the only way I can correlate a review to a region is through its language. And unfortunately, 17th century British colonialism has resulted in many disconnected regions being primarily English.
 
 Feedback #3: Visualizations are too congested  
-Resolution: Modified heatmaps to have games as rows so the full game name is readable. Also divided them into Regions/Country/Language.
+Resolution: Modified heatmaps to have games as rows so the full game name is readable, and grouped them byt language/region.
 
 Feedback #4: Review count not shown which could affect credibility of analysis  
-Resolution: Added review count tooltip to visualizations.
+Resolution: Added review count tooltips to heatmaps and map visualizations.
 
 Feedback #5: No sentiment over time visualization to justify claims of review bombing  
 Resolution: I can't make a visualization that could provide any meaningful insight with this data. Overwatch 2 was only listed on steam August 10, 2023. It immediately had negative reviews from Chinese players. I have no data on previous Chinese ratings to compare to. Regardless, this still shows an interesting story where Chinese players immediately review bombed the game in protest of Blizzard exiting the Chinese market.
@@ -26,28 +26,28 @@ Resolution: I can't make a visualization that could provide any meaningful insig
 #### Connor's Feedback
 
 Feedback #6: No introduction for visual aids  
-Resolution:
+Resolution: Added introductions to visual aids.
 
 Feedback #7: Adding a background section  
-Resolution:
+Resolution: Added background for steam in introduction.
 
 Feedback #8: No link to data source  
-Resolution:
+Resolution: Added a link to the data source.
 
 Feedback #9: "Games so popular that they've had a cultural impact on a country"  
-Resolution:
+Resolution: Fixed the grammar.
 
 Feedback #10: Elaborate more on the language assumption  
-Resolution:
+Resolution: Added context for how this is a limitation of the data.
 
-Feedback #11: No explanation for the amount of missing regions  
-Resolution:
+Feedback #11: No explanation for the amount of missing countries
+Resolution: Added missing countries (particularly LATAM) to the language mapping and updated the visualizations. Also included explanation for why some regions are missing.
 
 Feedback #12: Pie chart being a bad way to represent regions  
-Resolution: We can use a histogram instead
+Resolution: I think the pie chart is fine.
 
 Feedback #13: Rendering popularity/sentiment formulas in latex instead of in plaintext  
-Resolution:
+Resolution: Good idea, added latex for the formulas.
 
 Feedback #14: Not using playtime to determine popularity/sentiment.  
 Resolution: This is a fair point but I don't think playtime is a perfect signal of sentiment/popularity. Sentiment changes overtime. A hardcore player might have 3000 hours on Overwatch, but hate the game and write a negative review after a recent update removed his favorite character or something. Just because he has 3000 hours doesn't mean I should evaluate that review as having positive sentiment. Also for popularity, I'm worried about the potential of 'hardcore' players to skew results. Someone might love a game and leave a positive review with 3000 hours. Another person might play the game for 5 hours, realize they don't like it, and leave a negative review. Should the negative review be weighed as less valuable for sentiment/popularity in this case? I do think playtime could be an interesting metric for answering other questions outside my hypothesis, but for the sake of keeping my report concise, I've decided to leave it out.

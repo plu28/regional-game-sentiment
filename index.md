@@ -5,11 +5,11 @@ title: Steam Games Regional Sentiment
 # Analysis of Game Preference by Region using Steam Reviews
 
 ## Introduction and Hypothesis
-The Steam reviews data set is ~43gb of steam reviews. Each of these reviews tells you what language the review was written in. Using this, we can answer some interesting questions regarding game sentiment in different regions.
+Steam is the largest PC game distributor worldwide with about a ~70% market share [^1] in the space. Using available steam reviews data [^2], this analysis hopes to answer questions regarding game sentiment in differnt regions.
 
 1. What games are beloved by a country?
     - Hypothesis:
-        - Games so popular that they've had a cultural impact on a country.
+        - I believe games that are so popular that they've had a cultural impact on a country will appear clearly as beloved.
         - For example, Counter Strike has had a cultural impact in Eastern European countries, and I know Rocket League is also very strong in the french community.
 
 2. Are there games which are liked in one region but hated in another?
@@ -25,6 +25,8 @@ The Steam reviews data set is ~43gb of steam reviews. Each of these reviews tell
 2. Games with less than 10000 total reviews are ignored
 
 ## Regions
+The following is a map of the regions represented in this data set. This isn't a perfect mapping since again, languages don't map perfectly to regions. Notably, certain large regions like Africa or India are excluded. This is simply because the language did not exist in the data. If only the Steam data recorded the region as well and not just language.
+
 <div class="tableauPlaceholder" 
      id="viz1771784930728" 
      style="position: relative">
@@ -72,15 +74,17 @@ The Steam reviews data set is ~43gb of steam reviews. Each of these reviews tell
 Note that because English is adopted across multiple regions, it spans multiple countries which could be considered as part of separate regions. For this analysis, I define an English-Speaking region knowing that this is a very broad definition.
 
 ## Region Review Distribution
-<div class="tableauPlaceholder"
-     id="viz1771785040592"
-     style="position: relative">
+The following pie chart shows the proportion of the dataset each region represents.
+
+<div class="tableauPlaceholder" id="viz1773103257473" style="position: relative">
 
   <noscript>
     <a href="#">
-      <img alt="Region Review Distribution"
-           src="https://public.tableau.com/static/images/St/SteamReviewPie/RegionReviewDistribution/1_rss.png"
-           style="border: none" />
+      <img 
+        alt="Region Map"
+        src="https://public.tableau.com/static/images/NA/NARAKAGlobal/RegionMap/1_rss.png"
+        style="border: none"
+      />
     </a>
   </noscript>
 
@@ -88,11 +92,10 @@ Note that because English is adopted across multiple regions, it spans multiple 
     <param name="host_url" value="https://public.tableau.com/" />
     <param name="embed_code_version" value="3" />
     <param name="site_root" value="" />
-    <param name="name" value="SteamReviewPie/RegionReviewDistribution" />
+    <param name="name" value="NARAKAGlobal/RegionMap" />
     <param name="tabs" value="no" />
     <param name="toolbar" value="yes" />
-    <param name="static_image"
-           value="https://public.tableau.com/static/images/St/SteamReviewPie/RegionReviewDistribution/1.png" />
+    <param name="static_image" value="https://public.tableau.com/static/images/NA/NARAKAGlobal/RegionMap/1.png" />
     <param name="animate_transition" value="yes" />
     <param name="display_static_image" value="yes" />
     <param name="display_spinner" value="yes" />
@@ -101,10 +104,11 @@ Note that because English is adopted across multiple regions, it spans multiple 
     <param name="language" value="en-US" />
     <param name="filter" value="publish=yes" />
   </object>
+
 </div>
 
 <script type="text/javascript">
-  var divElement = document.getElementById("viz1771785040592");
+  var divElement = document.getElementById("viz1773103257473");
   var vizElement = divElement.getElementsByTagName("object")[0];
 
   vizElement.style.width = "100%";
@@ -129,9 +133,13 @@ Popularity is taken by taking the proportion of reviews a game has for all of a 
 
 This tells us how much a games popularity deviates from the norm for a region. 
 
-(region_game_reviews / region_total_reviews) / (global_game_reviews / global_total_reviews)
+$$
+\frac{\text{region\_game\_reviews}}{\text{region\_total\_reviews}}
+$$
 
-A positive value means the game is more popular in this region, negative means the game is less popular in this region, and a 0 value means its as popular as it should be.
+A positive value means the game is more popular in this region, negative means the game is less popular in this region, and a 0 value means its as popular as it should be. 
+
+Using this data, I was able to produce the following heatmap. The more red the tile, the less popular the game is than usual and vice versa for green tiles.
 
 <div class="tableauPlaceholder" id="viz1771885401652" style="position: relative">
     <noscript>
@@ -173,10 +181,6 @@ A positive value means the game is more popular in this region, negative means t
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
-Visualizing popularity on a heatmap. The more red the tile, the less popular the game is than usual and vice versa for green tiles.
-
-Rows are countries, columns are games.
-
 The more varied a column is in its color, the more varied its popularity is across regions.
 
 The first thing to note is how varied the popularity is across regions. If games were equally popular in most regions, then the heatmap would be mostly white. 
@@ -188,9 +192,13 @@ Sentiment is calculated similar to popularity, but using the positive review per
 
 This tells us if the amount of positive reviews for a game deviate from the norm for a region.
 
-(region %positive) / (global %positive)
+$$
+\frac{\text{region \%positive}}{\text{global \%positive}}
+$$
 
 A positive value means the game has more positive reviews in this region than normal, negative means the game has more positive reviews than normal, and a 0 means its positive reviews match the global average. 
+
+Using this data, I was able to produce the following heatmap. The more red the tile, the more that country deviates towards negative from the games positive percentage globally, and vice versa for green tiles.
 
 <div class="tableauPlaceholder" id="viz1771885508101" style="position: relative;">
     <noscript>
@@ -232,15 +240,15 @@ A positive value means the game has more positive reviews in this region than no
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
-The more red the tile, the more that country deviates towards negative from the games positive percentage globally, and vice versa for green tiles.
 
-Rows are countries, columns are games.
 
 The first thing to note is the lack of variance in sentiment across regions. This implies that a games sentiment does not vary much across regions.
 
 # Results
 
 ## Counter Strike is Very Popular in Eastern Europe
+The folowing map shows the LogPopularity for Counter Strike as a heatmap across a world map.
+
 <div class="tableauPlaceholder" id="viz1771885639870" style="position: relative;">
     <noscript>
         <a href="#">
@@ -284,6 +292,8 @@ The first thing to note is the lack of variance in sentiment across regions. Thi
 This aligns with expectations considering how many of the worlds top players originate from these regions. 
 
 ## NARAKA: Bladepoint dominant in Asia Due to Asian Aesthetic
+The folowing map shows the LogPopularity for NARAKA: Bladepoint as a heatmap across a world map.
+
 <div class="tableauPlaceholder" id="viz1771886045112" style="position: relative;">
     <noscript>
         <a href="#">
@@ -338,6 +348,10 @@ The game revolves around city building which is a niche that isn't specific to a
 There is an interesting outlier though with Overwatch 2. The game got delisted from mainland China when parent company Blizzard lapsed their contract with Chinese company NetEase. Since China required foreign games to be published through a local partner, this meant that all Blizzard titles (including Overwatch 2) were taken offline in mainland China. Looking at the popularity for China (LogPopularity=0.57), the game is more popular in China than other regions by a considerable amount. Therefore, when all players lost all of their progress and access to the game, the game was review bombed by Chinese players when Overwatch 2 released (3.5% positive reviews in China).
 
 ## Asians seem to have higher standards
+If you look at Asian countries relative game sentiment (Japan, Taiwan, China, South Korea), they seem to generally skew negative for their reviews for nearly all games. This seems to indicate that these players have higher standards for games compared to other regions. 
+
+The following heatmap is a subset of the previous sentiment heatmap, but filtered to only show Asian countries. 
+
 <div class="tableauPlaceholder" id="viz1771885731599" style="position: relative;">
     <noscript>
         <a href="#">
@@ -377,8 +391,6 @@ There is an interesting outlier though with Overwatch 2. The game got delisted f
     scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-
-If you look at Asian countries relative game sentiment (Japan, Taiwan, China, South Korea), they seem to generally skew negative for their reviews for nearly all games. This seems to indicate that these players have higher standards for games compared to other regions. 
 
 
 ## Returning to the Hypothesis and Conclusion
@@ -439,3 +451,6 @@ scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
+
+[^1]: https://en.wikipedia.org/wiki/Steam_(service)?useskin=vector
+[^2]: https://www.kaggle.com/datasets/kieranpoc/steam-reviews/data
