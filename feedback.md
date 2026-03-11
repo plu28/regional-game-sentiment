@@ -55,7 +55,7 @@ Resolution: This is a fair point but I don't think playtime is a perfect signal 
 > Again, you make this claim while assuming that the reader knows what Counter Strike is. Although a popular game, I would suggest giving some context to it before your visual. This context should include what type of game it is, why it is popular, and some history of the game to back this up.  
 
 Feedback #15: No background on Counter Strike  
-Resolution:
+Resolution: Added a little bit of CS background
 
 > You mention that this results aligns with your expectations, but do not provide proof that many of the world's top Counter Strike players originate from these regions. When you say this are you specifically talking about pro players in leagues such ESL/PGL, or does this statement include players from the Counter Strike premier leaderboards or Faceit leaderboards? There are a lot of possibilities here, and some further insight would significantly improve this conclusion.  
 

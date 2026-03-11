@@ -247,7 +247,9 @@ The first thing to note is the lack of variance in sentiment across regions. Thi
 # Results
 
 ## Counter Strike is Very Popular in Eastern Europe
-The folowing map shows the LogPopularity for Counter Strike as a heatmap across a world map.
+Counter Strike is a first person tactical shooter first released in 1999 by Valve. As of March 2026, it tops the Steam concurrent user charts and averages about 1.5M concurrent users daily [^3].
+
+The following map shows the LogPopularity for Counter Strike as a heatmap across a world map.
 
 <div class="tableauPlaceholder" id="viz1771885639870" style="position: relative;">
     <noscript>
@@ -454,3 +456,4 @@ vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
 [^1]: https://en.wikipedia.org/wiki/Steam_(service)?useskin=vector
 [^2]: https://www.kaggle.com/datasets/kieranpoc/steam-reviews/data
+[^3]: https://steamcharts.com/
