@@ -7,6 +7,7 @@ vietnamese,SEA,Vietnam
 thai,SEA,Thailand
 indonesian,SEA,Indonesia
 russian,CIS,Russia
+russian,CIS,Belarus
 ukrainian,CIS,Ukraine
 polish,Eastern Europe,Poland
 czech,Eastern Europe,Czechia
@@ -20,16 +21,36 @@ danish,Nordic,Denmark
 norwegian,Nordic,Norway
 finnish,Nordic,Finland
 german,Western Europe,Germany
+german,Western Europe,Austria
+german,Western Europe,Switzerland
 french,Western Europe,France
+french,Western Europe,Belgium
+french,Western Europe,Luxembourg
 dutch,Western Europe,Netherlands
 italian,Western Europe,Italy
 spanish,Western Europe,Spain
+latam,LATAM,Mexico
+latam,LATAM,Argentina
+latam,LATAM,Chile
+latam,LATAM,Colombia
+latam,LATAM,Peru
+latam,LATAM,Ecuador
+latam,LATAM,Bolivia
+latam,LATAM,Paraguay
+latam,LATAM,Uruguay
+latam,LATAM,Guatemala
+latam,LATAM,Honduras
+latam,LATAM,El Salvador
+latam,LATAM,Nicaragua
+latam,LATAM,Costa Rica
+latam,LATAM,Panama
+latam,LATAM,Cuba
+latam,LATAM,Dominican Republic
 portuguese,Western Europe,Portugal
+brazilian,Brazil,Brazil
 english,English-speaking,United States
 english,English-speaking,Canada
 english,English-speaking,United Kingdom
 english,English-speaking,Ireland
 english,English-speaking,Australia
 english,English-speaking,New Zealand
-brazilian,Brazil,Brazil
-latam,LATAM,Mexico

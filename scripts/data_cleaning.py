@@ -43,14 +43,14 @@ min_reviews = 1000
 # ''')
 
 # csv with sentiment and popularity computed for tableau
-# base = duckdb.sql(f'''
-#     SELECT
-#         language,
-#         game,
-#         voted_up,
-#         timestamp,
-#     FROM '{output}.parquet'
-#               ''')
+base = duckdb.sql(f'''
+    SELECT
+        language,
+        game,
+        voted_up,
+        timestamp,
+    FROM '{output}.parquet'
+              ''')
 # duckdb.sql(f'''
 # COPY (
 #         WITH reg_reviews_tbl AS (
@@ -105,14 +105,26 @@ min_reviews = 1000
 
 
 # CSV with review timestamps for OW2 China review visualization
+# res = duckdb.sql(f'''
+#     COPY (
+#         SELECT
+#             language,
+#             voted_up,
+#             timestamp,
+#         FROM '{output}.parquet'
+#         WHERE game = 'Overwatch® 2' AND (language = 'schinese' OR language = 'tchinese' OR language = 'english')
+# ) 
+#     TO 'avg-rating-with-time.csv'
+# ''')
+
 res = duckdb.sql(f'''
-    COPY (
-        SELECT
-            language,
-            voted_up,
-            timestamp,
-        FROM '{output}.parquet'
-        WHERE game = 'Overwatch® 2' AND (language = 'schinese' OR language = 'tchinese' OR language = 'english')
-) 
-    TO 'avg-rating-with-time.csv'
+            SELECT
+                language,
+                game,
+                AVG(voted_up) AS reg_positive_percent,
+                COUNT(*) AS region_game_reviews
+            FROM base
+            GROUP BY language, game
+            HAVING region_game_reviews = 2487 AND game = 'Red Dead Redemption 2'
 ''')
+print(res)
