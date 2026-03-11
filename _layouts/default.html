@@ -8,10 +8,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     .page-content .wrapper {
-      max-width: 980px;
+      max-width: 1240px;
       padding-left: 24px;
       padding-right: 24px;
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .page-main {
+      min-width: 0;
+    }
+
+    .toc-sidebar {
+      position: sticky;
+      top: 24px;
+      max-height: calc(100vh - 32px);
+      overflow: auto;
+      padding-left: 14px;
+      border-left: 1px solid #e2e2e2;
+      font-size: 0.95rem;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .toc-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc-item {
+      margin: 0 0 6px;
+      line-height: 1.35;
+    }
+
+    .toc-item.level-h3 {
+      margin-left: 14px;
+      font-size: 0.92em;
+    }
+
+    .toc-link {
+      color: #555;
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      padding-left: 8px;
+      display: inline-block;
+    }
+
+    .toc-link:hover {
+      color: #111;
+    }
+
+    .toc-link.is-active {
+      color: #111;
+      border-left-color: #2a7ae2;
+      font-weight: 600;
+    }
+
+    @media (max-width: 980px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .toc-sidebar {
+        position: static;
+        max-height: none;
+        border-left: 0;
+        border-bottom: 1px solid #e2e2e2;
+        padding: 0 0 14px;
+      }
     }
 
     @media (max-width: 700px) {
@@ -25,9 +106,102 @@
 </head>
 <body>
   <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
+    <div class="wrapper page-layout">
+      <article class="page-main" id="page-main-content">
+        {{ content }}
+      </article>
+
+      <aside class="toc-sidebar" aria-label="On this page">
+        <h2 class="toc-title">On this page</h2>
+        <nav id="toc-nav">
+          <ul id="toc-list" class="toc-list"></ul>
+        </nav>
+      </aside>
     </div>
   </main>
+  <script>
+    (function () {
+      var content = document.getElementById("page-main-content");
+      var tocList = document.getElementById("toc-list");
+      if (!content || !tocList) return;
+
+      var headings = content.querySelectorAll("h2, h3");
+      if (!headings.length) {
+        var tocNav = document.getElementById("toc-nav");
+        if (tocNav) tocNav.style.display = "none";
+        return;
+      }
+
+      var seenIds = Object.create(null);
+      function slugify(text) {
+        return text
+          .toLowerCase()
+          .trim()
+          .replace(/[^a-z0-9\s-]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/-+/g, "-");
+      }
+
+      var linksById = Object.create(null);
+
+      headings.forEach(function (heading) {
+        var levelClass = heading.tagName.toLowerCase() === "h3" ? "level-h3" : "level-h2";
+        var text = heading.textContent.trim();
+        if (!text) return;
+
+        var id = heading.id || slugify(text) || "section";
+        var baseId = id;
+        var idx = 2;
+        while (seenIds[id] || document.getElementById(id) && document.getElementById(id) !== heading) {
+          id = baseId + "-" + idx;
+          idx += 1;
+        }
+        seenIds[id] = true;
+        heading.id = id;
+
+        var item = document.createElement("li");
+        item.className = "toc-item " + levelClass;
+
+        var link = document.createElement("a");
+        link.className = "toc-link";
+        link.href = "#" + id;
+        link.textContent = text;
+
+        item.appendChild(link);
+        tocList.appendChild(item);
+        linksById[id] = link;
+      });
+
+      var activeId = null;
+      function setActive(id) {
+        if (activeId && linksById[activeId]) {
+          linksById[activeId].classList.remove("is-active");
+        }
+        activeId = id;
+        if (activeId && linksById[activeId]) {
+          linksById[activeId].classList.add("is-active");
+        }
+      }
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              setActive(entry.target.id);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -70% 0px", threshold: 0.1 }
+      );
+
+      headings.forEach(function (heading) {
+        observer.observe(heading);
+      });
+
+      if (headings[0] && headings[0].id) {
+        setActive(headings[0].id);
+      }
+    })();
+  </script>
 </body>
 </html>

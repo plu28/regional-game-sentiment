@@ -5,7 +5,7 @@ title: Steam Games Regional Sentiment
 # Analysis of Game Preference by Region using Steam Reviews
 
 ## Introduction and Hypothesis
-Steam is the largest PC game distributor worldwide with about a ~70% market share [^1] in the space. Using available steam reviews data [^2], this analysis hopes to answer questions regarding game sentiment in differnt regions.
+Steam is the largest PC game distributor worldwide with about a ~70% market share [^1] in the space. Using available steam reviews data [^2], this analysis hopes to answer questions regarding game sentiment in different regions.
 
 1. What games are beloved by a country?
     - Hypothesis:
@@ -135,7 +135,7 @@ The two main values on which I am running my analysis are popularity and sentime
 - Popularity: How popular is this game in this region?
 - Sentiment: How well received is this game in this region?
 
-#### Popularity
+### Popularity
 Popularity is taken by taking the proportion of reviews a game has for all of a regions reviews, over the proportion of reviews that the game makes up globally.
 
 This tells us how much a games popularity deviates from the norm for a region. 
@@ -201,7 +201,7 @@ The first thing to note is how varied the popularity is across regions. If games
 
 Counter Strike is a good example of this where the game is extremely popular in Eastern Europe (Romania especially) compared to other countries.
 
-#### Relative Sentiment
+### Sentiment
 Sentiment is calculated similar to popularity, but using the positive review percent metric instead.
 
 This tells us if the amount of positive reviews for a game deviate from the norm for a region.
@@ -435,57 +435,51 @@ This highly concentrated popularity can be attributed to the games focus on East
 
 ## What happened with Overwatch 2 in China?
 The following heatmap is a subset of sentiment heatmap filtered to only show Overwatch 2 sentiment.
-<div class="tableauPlaceholder" id="viz1773245017043" style="position: relative">
+<div class='tableauPlaceholder' id='viz1773254304709' style='position: relative'>
 
-  <noscript>
-    <a href="#">
-      <img
-        alt="Sentiment Heatmap"
-        src="https://public.tableau.com/static/images/OW/OW2Heat/SentimentHeatmap/1_rss.png"
-        style="border: none"
-      />
-    </a>
-  </noscript>
+    <noscript>
+        <a href='#'>
+            <img
+                alt='OW2 Popularity Heatmap'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/OW2PopularityHeatmap/1_rss.png'
+                style='border: none'
+            />
+        </a>
+    </noscript>
 
-  <object class="tableauViz" style="display:none;">
-
-    <param name="host_url" value="https://public.tableau.com/" />
-    <param name="embed_code_version" value="3" />
-    <param name="site_root" value="" />
-
-    <param name="name" value="OW2Heat/SentimentHeatmap" />
-
-    <param name="tabs" value="no" />
-    <param name="toolbar" value="yes" />
-
-    <param
-      name="static_image"
-      value="https://public.tableau.com/static/images/OW/OW2Heat/SentimentHeatmap/1.png"
-    />
-
-    <param name="animate_transition" value="yes" />
-    <param name="display_static_image" value="yes" />
-    <param name="display_spinner" value="yes" />
-    <param name="display_overlay" value="yes" />
-    <param name="display_count" value="yes" />
-    <param name="language" value="en-US" />
-    <param name="filter" value="publish=yes" />
-
-  </object>
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/OW2PopularityHeatmap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/OW2PopularityHeatmap/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+    </object>
 
 </div>
 
-<script type="text/javascript">
-  var divElement = document.getElementById("viz1773245017043");
-  var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773254304709');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-  vizElement.style.width = "100%";
-  vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-  var scriptElement = document.createElement("script");
-  scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
 Notably, sentiment is skewed very heavily by Chinese players.
@@ -573,7 +567,6 @@ This observation brings up more questions than answers. But some plausible expla
 
     Other examples include:
 
-    Games especially more hated than in other regions:
     - Overwatch 2 in China (Global 11% positive, China 3% positive) 
         - Overwatch 2 lost support in China and got review bombed 
     - Apex Legends in Taiwan (Global 79% positive, Taiwan 48% positive)
