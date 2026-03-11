@@ -117,14 +117,38 @@ base = duckdb.sql(f'''
 #     TO 'avg-rating-with-time.csv'
 # ''')
 
+# Debugging
+# res = duckdb.sql(f'''
+#             SELECT
+#                 language,
+#                 game,
+#                 AVG(voted_up) AS reg_positive_percent,
+#                 COUNT(*) AS region_game_reviews
+#             FROM base
+#             GROUP BY language, game
+#             HAVING region_game_reviews = 2487 AND game = 'Red Dead Redemption 2'
+# ''')
+
+# Counting games vs cut down
 res = duckdb.sql(f'''
             SELECT
-                language,
-                game,
-                AVG(voted_up) AS reg_positive_percent,
-                COUNT(*) AS region_game_reviews
+                COUNT(DISTINCT game) AS game_count,
             FROM base
-            GROUP BY language, game
-            HAVING region_game_reviews = 2487 AND game = 'Red Dead Redemption 2'
+''')
+print(res)
+
+# Cut down games have 100,000 global reviews and at least 100 regional reviews
+res = duckdb.sql(f'''
+             WITH regions_game_reviews AS (
+                SELECT
+                    COUNT(*) AS region_game_reviews,
+                    game,
+                FROM base
+                GROUP BY game, language
+                HAVING region_game_reviews > '{min_reviews}'
+             )
+            SELECT
+                COUNT(DISTINCT game) AS filtered_game_count,
+            FROM regions_game_reviews 
 ''')
 print(res)
