@@ -28,48 +28,51 @@ Steam is the largest PC game distributor worldwide with about a ~70% market shar
 ## Regions
 The following is a map of the regions represented in this data set. This isn't a perfect mapping since again, languages don't map perfectly to regions. Notably, certain large regions like Africa or India are excluded. This is simply because the language did not exist in the data. If only the Steam data recorded the region as well and not just language.
 
-<div class="tableauPlaceholder" 
-     id="viz1771784930728" 
-     style="position: relative">
+<div class='tableauPlaceholder' id='viz1773250371250' style='position: relative'>
+    
+    <noscript>
+        <a href='#'>
+            <img 
+                alt='Region Map'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/RegionMap/1_rss.png'
+                style='border: none'
+            />
+        </a>
+    </noscript>
 
-  <noscript>
-    <a href="#">
-      <img alt="Region Map"
-           src="https://public.tableau.com/static/images/St/SteamReviewRegions/RegionMap/1_rss.png"
-           style="border: none" />
-    </a>
-  </noscript>
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/RegionMap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param 
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/RegionMap/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+    </object>
 
-  <object class="tableauViz" style="display:none;">
-    <param name="host_url" value="https://public.tableau.com/" />
-    <param name="embed_code_version" value="3" />
-    <param name="site_root" value="" />
-    <param name="name" value="SteamReviewRegions/RegionMap" />
-    <param name="tabs" value="no" />
-    <param name="toolbar" value="yes" />
-    <param name="static_image"
-           value="https://public.tableau.com/static/images/St/SteamReviewRegions/RegionMap/1.png" />
-    <param name="animate_transition" value="yes" />
-    <param name="display_static_image" value="yes" />
-    <param name="display_spinner" value="yes" />
-    <param name="display_overlay" value="yes" />
-    <param name="display_count" value="yes" />
-    <param name="language" value="en-US" />
-    <param name="filter" value="publish=yes" />
-  </object>
 </div>
 
-<script type="text/javascript">
-  var divElement = document.getElementById("viz1771784930728");
-  var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773250371250');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-  vizElement.style.width = "100%";
-  vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-  var scriptElement = document.createElement("script");
-  scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
 Note that because English is adopted across multiple regions, it spans multiple countries which could be considered as part of separate regions. For this analysis, I define an English-Speaking region knowing that this is a very broad definition.
@@ -77,48 +80,51 @@ Note that because English is adopted across multiple regions, it spans multiple 
 ## Region Review Distribution
 The following pie chart shows the proportion of the dataset each region represents.
 
-<div class="tableauPlaceholder" id="viz1773103257473" style="position: relative">
+<div class='tableauPlaceholder' id='viz1773250275459' style='position: relative'>
+    
+    <noscript>
+        <a href='#'>
+            <img 
+                alt='Region Review Distribution'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/RegionReviewDistribution/1_rss.png'
+                style='border: none'
+            />
+        </a>
+    </noscript>
 
-  <noscript>
-    <a href="#">
-      <img 
-        alt="Region Map"
-        src="https://public.tableau.com/static/images/NA/NARAKAGlobal/RegionMap/1_rss.png"
-        style="border: none"
-      />
-    </a>
-  </noscript>
-
-  <object class="tableauViz" style="display:none;">
-    <param name="host_url" value="https://public.tableau.com/" />
-    <param name="embed_code_version" value="3" />
-    <param name="site_root" value="" />
-    <param name="name" value="NARAKAGlobal/RegionMap" />
-    <param name="tabs" value="no" />
-    <param name="toolbar" value="yes" />
-    <param name="static_image" value="https://public.tableau.com/static/images/NA/NARAKAGlobal/RegionMap/1.png" />
-    <param name="animate_transition" value="yes" />
-    <param name="display_static_image" value="yes" />
-    <param name="display_spinner" value="yes" />
-    <param name="display_overlay" value="yes" />
-    <param name="display_count" value="yes" />
-    <param name="language" value="en-US" />
-    <param name="filter" value="publish=yes" />
-  </object>
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/RegionReviewDistribution' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param 
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/RegionReviewDistribution/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+    </object>
 
 </div>
 
-<script type="text/javascript">
-  var divElement = document.getElementById("viz1773103257473");
-  var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773250275459');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-  vizElement.style.width = "100%";
-  vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-  var scriptElement = document.createElement("script");
-  scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
 The majority (41.92%) of reviews come from English speaking countries. This is partially because of how broad this 'region' is. Other notable regions are China (17.29%), CIS (Ukraine + Russia) (13.39%), and Western Europe (10.94%). Note that because English is the primary language in the UK, it is included as part of the English-speaking region instead of Western Europe.
@@ -135,50 +141,57 @@ Popularity is taken by taking the proportion of reviews a game has for all of a 
 This tells us how much a games popularity deviates from the norm for a region. 
 
 $$
-\log{\left(\frac{\text{region\ review\ proportion}}{\text{global\ review\ proportion}}\right)}
+\log{\left(\frac{\text{region review proportion}}{\text{global review proportion}}\right)}
 $$
 
 A positive value means the game is more popular in this region, negative means the game is less popular in this region, and a 0 value means its as popular as it should be. 
 
 Using this data, I was able to produce the following heatmap. The more red the tile, the less popular the game is than usual and vice versa for green tiles.
 
-<div class="tableauPlaceholder" id="viz1771885401652" style="position: relative">
+<div class='tableauPlaceholder' id='viz1773250471011' style='position: relative'>
+    
     <noscript>
-        <a href="#">
-            <img 
-                alt="Popularity Heatmap"
-                src="https://public.tableau.com/static/images/St/SteamReviewPopHeatmap/PopularityHeatmap/1_rss.png"
-                style="border: none;" 
+        <a href='#'>
+            <img
+                alt='Popularity Heatmap'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/PopularityHeatmap/1_rss.png'
+                style='border: none'
             />
         </a>
     </noscript>
-    <object class="tableauViz" style="display:none;">
-        <param name="host_url" value="https://public.tableau.com/" />
-        <param name="embed_code_version" value="3" />
-        <param name="site_root" value="" />
-        <param name="name" value="SteamReviewPopHeatmap/PopularityHeatmap" />
-        <param name="tabs" value="no" />
-        <param name="toolbar" value="yes" />
-        <param name="static_image" value="https://public.tableau.com/static/images/St/SteamReviewPopHeatmap/PopularityHeatmap/1.png" />
-        <param name="animate_transition" value="yes" />
-        <param name="display_static_image" value="yes" />
-        <param name="display_spinner" value="yes" />
-        <param name="display_overlay" value="yes" />
-        <param name="display_count" value="yes" />
-        <param name="language" value="en-US" />
-        <param name="filter" value="publish=yes" />
+
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/PopularityHeatmap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/PopularityHeatmap/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
     </object>
+
 </div>
 
-<script type="text/javascript">
-    var divElement = document.getElementById("viz1771885401652");
-    var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773250471011');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-    vizElement.style.width = "100%";
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
@@ -194,50 +207,57 @@ Sentiment is calculated similar to popularity, but using the positive review per
 This tells us if the amount of positive reviews for a game deviate from the norm for a region.
 
 $$
-\log{\left(\frac{\text{region \%positive}}{\text{global \%positive}}\right)}
+\log{\left(\frac{\text{region %positive}}{\text{global %positive}}\right)}
 $$
 
 A positive value means the game has more positive reviews in this region than normal, negative means the game has more positive reviews than normal, and a 0 means its positive reviews match the global average. 
 
 Using this data, I was able to produce the following heatmap. The more red the tile, the more that country deviates towards negative from the games positive percentage globally, and vice versa for green tiles.
 
-<div class="tableauPlaceholder" id="viz1771885508101" style="position: relative;">
+<div class='tableauPlaceholder' id='viz1773250504708' style='position: relative'>
+
     <noscript>
-        <a href="#">
+        <a href='#'>
             <img
-                alt="Sentiment Heatmap"
-                src="https://public.tableau.com/static/images/St/SteamReviewSentHeatmap/SentimentHeatmap/1_rss.png"
-                style="border: none;"
+                alt='Sentiment Heatmap'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/SentimentHeatmap/1_rss.png'
+                style='border: none'
             />
         </a>
     </noscript>
-    <object class="tableauViz" style="display: none;">
-        <param name="host_url" value="https://public.tableau.com/" />
-        <param name="embed_code_version" value="3" />
-        <param name="site_root" value="" />
-        <param name="name" value="SteamReviewSentHeatmap/SentimentHeatmap" />
-        <param name="tabs" value="no" />
-        <param name="toolbar" value="yes" />
-        <param name="static_image" value="https://public.tableau.com/static/images/St/SteamReviewSentHeatmap/SentimentHeatmap/1.png" />
-        <param name="animate_transition" value="yes" />
-        <param name="display_static_image" value="yes" />
-        <param name="display_spinner" value="yes" />
-        <param name="display_overlay" value="yes" />
-        <param name="display_count" value="yes" />
-        <param name="language" value="en-US" />
-        <param name="filter" value="publish=yes" />
+
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/SentimentHeatmap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/SentimentHeatmap/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
     </object>
+
 </div>
 
-<script type="text/javascript">
-    var divElement = document.getElementById("viz1771885508101");
-    var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773250504708');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-    vizElement.style.width = "100%";
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
@@ -309,43 +329,50 @@ Counter Strike is a first person tactical shooter first released in 1999 by Valv
 
 The following map shows the LogPopularity for Counter Strike as a heatmap across a world map.
 
-<div class="tableauPlaceholder" id="viz1771885639870" style="position: relative;">
+<div class='tableauPlaceholder' id='viz1773250572249' style='position: relative'>
+
     <noscript>
-        <a href="#">
+        <a href='#'>
             <img
-                alt="Counter Strike Popularity Global Heatmap"
-                src="https://public.tableau.com/static/images/CS/CSPopHeat/CounterStrikePopularityGlobalHeatmap/1_rss.png"
-                style="border: none;"
+                alt='Counter Strike Popularity Global Heatmap'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/CounterStrikePopularityGlobalHeatmap/1_rss.png'
+                style='border: none'
             />
         </a>
     </noscript>
-    <object class="tableauViz" style="display: none;">
-        <param name="host_url" value="https://public.tableau.com/" />
-        <param name="embed_code_version" value="3" />
-        <param name="site_root" value="" />
-        <param name="name" value="CSPopHeat/CounterStrikePopularityGlobalHeatmap" />
-        <param name="tabs" value="no" />
-        <param name="toolbar" value="yes" />
-        <param name="static_image" value="https://public.tableau.com/static/images/CS/CSPopHeat/CounterStrikePopularityGlobalHeatmap/1.png" />
-        <param name="animate_transition" value="yes" />
-        <param name="display_static_image" value="yes" />
-        <param name="display_spinner" value="yes" />
-        <param name="display_overlay" value="yes" />
-        <param name="display_count" value="yes" />
-        <param name="language" value="en-US" />
-        <param name="filter" value="publish=yes" />
+
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/CounterStrikePopularityGlobalHeatmap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/CounterStrikePopularityGlobalHeatmap/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
     </object>
+
 </div>
 
-<script type="text/javascript">
-    var divElement = document.getElementById("viz1771885639870");
-    var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773250572249');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-    vizElement.style.width = "100%";
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
@@ -357,43 +384,50 @@ We observe the opposite popularity for NARAKA: Bladepoint where the game isn't p
 NARAKA: Bladepoint is a battle royale game developed by a Chinese studio which centers its aesthetic around Chinese mythology and martial arts. The developers also invest heavily into an esports ecosystem which exists **only** in Asian countries. 
 
 The folowing map shows the LogPopularity for NARAKA: Bladepoint as a heatmap across a world map.
-<div class="tableauPlaceholder" id="viz1771886045112" style="position: relative;">
+<div class='tableauPlaceholder' id='viz1773250606909' style='position: relative'>
+
     <noscript>
-        <a href="#">
+        <a href='#'>
             <img
-                alt="NARAKA: Bladepoint Popularity Global Heatmap"
-                src="https://public.tableau.com/static/images/NA/NARAKAGlobal/NARAKABladepointPopularityGlobalHeatmap/1_rss.png"
-                style="border: none;"
+                alt='NARAKA: Bladepoint Popularity Global Heatmap'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/NARAKABladepointPopularityGlobalHeatmap/1_rss.png'
+                style='border: none'
             />
         </a>
     </noscript>
-    <object class="tableauViz" style="display: none;">
-        <param name="host_url" value="https://public.tableau.com/" />
-        <param name="embed_code_version" value="3" />
-        <param name="site_root" value="" />
-        <param name="name" value="NARAKAGlobal/NARAKABladepointPopularityGlobalHeatmap" />
-        <param name="tabs" value="no" />
-        <param name="toolbar" value="yes" />
-        <param name="static_image" value="https://public.tableau.com/static/images/NA/NARAKAGlobal/NARAKABladepointPopularityGlobalHeatmap/1.png" />
-        <param name="animate_transition" value="yes" />
-        <param name="display_static_image" value="yes" />
-        <param name="display_spinner" value="yes" />
-        <param name="display_overlay" value="yes" />
-        <param name="display_count" value="yes" />
-        <param name="language" value="en-US" />
-        <param name="filter" value="publish=yes" />
+
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/NARAKABladepointPopularityGlobalHeatmap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/NARAKABladepointPopularityGlobalHeatmap/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
     </object>
+
 </div>
 
-<script type="text/javascript">
-    var divElement = document.getElementById("viz1771886045112");
-    var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773250606909');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-    vizElement.style.width = "100%";
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
@@ -461,43 +495,50 @@ The game got delisted from mainland China when parent company Blizzard lapsed th
 ## East Asian Reviews Skew Negative
 If you look at East Asian countries relative game sentiment (Japan, Taiwan, China, South Korea), they seem to generally skew negative for their reviews for nearly all games. The following heatmap is a subset of the previous sentiment heatmap, but filtered to only show East Asian countries.
 
-<div class="tableauPlaceholder" id="viz1771885731599" style="position: relative;">
+<div class='tableauPlaceholder' id='viz1773250692330' style='position: relative'>
+
     <noscript>
-        <a href="#">
+        <a href='#'>
             <img
-                alt="Sentiment Heatmap (Asian Countries)"
-                src="https://public.tableau.com/static/images/As/AsianSentiment/SentimentHeatmapAsianCountries/1_rss.png"
-                style="border: none;"
+                alt='Sentiment Heatmap (Asian Countries)'
+                src='https://public.tableau.com/static/images/OW/OW2Heat/SentimentHeatmapAsianCountries/1_rss.png'
+                style='border: none'
             />
         </a>
     </noscript>
-    <object class="tableauViz" style="display: none;">
-        <param name="host_url" value="https://public.tableau.com/" />
-        <param name="embed_code_version" value="3" />
-        <param name="site_root" value="" />
-        <param name="name" value="AsianSentiment/SentimentHeatmapAsianCountries" />
-        <param name="tabs" value="no" />
-        <param name="toolbar" value="yes" />
-        <param name="static_image" value="https://public.tableau.com/static/images/As/AsianSentiment/SentimentHeatmapAsianCountries/1.png" />
-        <param name="animate_transition" value="yes" />
-        <param name="display_static_image" value="yes" />
-        <param name="display_spinner" value="yes" />
-        <param name="display_overlay" value="yes" />
-        <param name="display_count" value="yes" />
-        <param name="language" value="en-US" />
-        <param name="filter" value="publish=yes" />
+
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='OW2Heat/SentimentHeatmapAsianCountries' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param
+            name='static_image'
+            value='https://public.tableau.com/static/images/OW/OW2Heat/SentimentHeatmapAsianCountries/1.png'
+        />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
     </object>
+
 </div>
 
-<script type="text/javascript">
-    var divElement = document.getElementById("viz1771885731599");
-    var vizElement = divElement.getElementsByTagName("object")[0];
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1773250692330');
+    var vizElement = divElement.getElementsByTagName('object')[0];
 
-    vizElement.style.width = "100%";
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
 
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
